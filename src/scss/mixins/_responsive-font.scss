@@ -1,0 +1,10 @@
+@mixin responsive($font-size-min, $font-size-max, $break-min, $break-max) {
+    font-size: calc( #{$font-size-max} * ((100vw - #{$break-min}) / #{$break-max - break-min}) );
+    
+    @media(max-width: $break-min) {
+        font-size: $font-size-min;
+    }
+    @media(min-width: $break-max) {
+        font-size: $font-size-max;
+    }
+}

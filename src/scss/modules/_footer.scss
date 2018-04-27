@@ -1,0 +1,30 @@
+.footer {
+    margin: 0 auto;
+    max-width: 386px;
+    text-align: center;
+    border-top: 5px solid $gray-3;
+
+    img {
+        padding-top: 30px; 
+        max-width: 200px;
+        opacity: .6;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        color: $gray-2;
+        font-size: 12px;
+        text-transform: uppercase;
+        
+        &:not(:last-child)::after {
+            content: '—';
+            padding: 15px;
+            display: inline-block;
+        }
+    }
+}

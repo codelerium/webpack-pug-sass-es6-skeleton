@@ -1,0 +1,49 @@
+.text {
+    color: inherit;
+    font-weight: 300;
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--light {
+        font-weight: 100;
+    }
+    
+    &--medium {
+        font-weight: 500;
+    }
+    
+    &--bold {
+        font-weight: 700;
+    }
+    
+    &--black {
+        font-weight: 900;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--subtitle {
+        font-weight: 900;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 15px 0;
+        max-width: 280px;
+        margin: 0 auto; 
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--right {
+        text-align: right;
+    }
+}

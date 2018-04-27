@@ -1,0 +1,44 @@
+.indicator {
+    position: relative;
+    width: 100%;
+    height: 20px;
+
+    &__active-mask,
+    &__active,
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__active-mask {
+        /* MODIFY FROM JS */
+        transform: translateX(-25%);
+        overflow: hidden;
+    }
+    
+    &__active {
+        background: linear-gradient(to right, $blue, $light-blue);
+        /* KEEP SYNCED WITH VALUE ABOVE */
+        transform: translateX(25%);
+    }
+
+    &__bg {
+        border: 1px solid $light-blue;
+        border-image: linear-gradient(to right, $blue, $light-blue) 1;
+    }
+
+    &--large {
+        height: 40px;
+
+        .indicator__active {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            color: $white;
+            font-weight: 300;
+        }
+    }
+}

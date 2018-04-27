@@ -1,3 +1,22 @@
-body {
-    background: blue;
-}
+// Mixins
+@import 'mixins/responsive-font';
+
+// Partials
+@import 'partials/colors';
+@import 'partials/media';
+@import 'partials/fonts';
+@import 'partials/text';
+
+// Modules
+@import 'modules/normalize';
+@import 'modules/layout';
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/button';
+@import 'modules/grid';
+@import 'modules/section';
+@import 'modules/tile';
+@import 'modules/indicator';
+@import 'modules/divider';
+@import 'modules/search';
+@import 'modules/total-edits';

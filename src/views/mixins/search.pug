@@ -1,0 +1,21 @@
+include button.pug
+
+mixin search()
+    .search
+        .search__header
+            img(src="/images/FIG_01.png")
+        .search__main
+            .search__main-item
+                .text.text--left.text--uppercase Szabadszavas keresés
+                .search__input
+                    input(type="text" placeholder="keresés")
+            .search__main-item
+                .text.text--right.text--uppercase Újság szerint
+                .search__select
+                    select
+                        option(selected) összes portál
+                        option fidesz
+        .search__footer
+            .row
+                .col.col--center
+                    +button('Ok !', '#')

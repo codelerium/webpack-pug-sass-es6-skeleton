@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1 0 100%;
+    
+    &--3 {
+        flex: 0 0 32.2%;
+    }
+
+    &--center {
+        text-align: center;   
+    }
+}

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devServer: {
-        contentBase: path.resolve(__dirname, '../dist'),
+        contentBase: path.resolve(__dirname, '../src/assets'),
         compress: true,
         port: 3001
     },
@@ -42,7 +42,18 @@ module.exports = {
             {
                 test: /\.pug$/, 
                 loader: 'pug-loader'
-            }
+            },
+            { 
+                test: /\.(png|woff|woff2|eot|ttf|otf)$/, 
+                loader: 'url-loader?limit=100000'
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    publicPath: '/images/'
+                }
+            },
         ]
     },
     plugins: [

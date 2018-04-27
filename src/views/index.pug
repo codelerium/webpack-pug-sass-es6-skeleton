@@ -1,6 +1,65 @@
-html
-    head
-        meta(charset="utf-8")
-    body
-        include modules/layout
-        script(src="main.bundle.js")
+extends modules/layout.pug
+include mixins/button.pug
+include mixins/tile.pug
+include mixins/search.pug
+include mixins/total-edits.pug
+
+block content
+    include modules/header.pug
+
+    section.section
+        .pillarbox
+            .divider
+
+    section.section    
+        .pillarbox
+            .row
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle STEALTH EDITEK SZÁMÁNAK VÁLTOZÁSA IDŐBEN A 2018. MÁJUS 03-TÓL
+                    +total-edits('221.535', '34.897')
+                    +button('Tudj meg többet', 'http://google.com')
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle STEALTH EDIT 
+                        br
+                        | TOPLISTA
+                    +total-edits('221.535', '34.897')
+                    +button('Tudj meg többet', 'http://google.com')
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle ÖSSZESEN 256.432 VIZSGÁLT CIKK EBBŐL 34.897 STEALTH EDIT
+                    +total-edits('221.535', '34.897')
+                    +button('Tudj meg többet', 'http://google.com')
+
+    section.section.section--light  
+        .pillarbox
+            .row
+                .col.col--center
+                    .text.text--subtitle LEGFRISSEBB STEALTH EDITEK
+            .row
+                .col.col--3
+                    +tile('pestisracok', 'pestisrácok.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.')
+                .col.col--3
+                    +tile('origo', 'origo.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.')
+                .col.col--3
+                    +tile('444', '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.')
+
+    section.section
+        .pillarbox
+            +search()   
+
+    section.section  
+        .pillarbox
+            .row
+                .col.col--center
+                    .text.text--subtitle TOVÁBBI FRISS STEALTH EDITEK
+            .row
+                .col
+                    +tile('pestisracok', 'pestisrácok.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true)
+                .col
+                    +tile('origo', 'origo.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true)
+                .col
+                    +tile('444', '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true)
+
+                .col.col--center
+                    +button('Még több', 'http://google.com') 
+
+    include modules/footer.pug

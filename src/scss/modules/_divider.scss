@@ -1,0 +1,31 @@
+$triangle-s: 25px;
+$triangle-l: 50px;
+
+.divider {
+    position: relative;
+    margin: auto;
+    max-width: 386px;
+    height: 5px;
+    background: $gray-3;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-style: solid;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        border-width: $triangle-l $triangle-l 0 $triangle-l;
+        border-color: $dark-blue transparent transparent transparent;
+    }
+
+    &:after {
+        border-width: $triangle-s $triangle-s 0 $triangle-s;
+        border-color: $gray-3 transparent transparent transparent;
+    }
+}

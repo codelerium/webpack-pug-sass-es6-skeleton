@@ -1,0 +1,40 @@
+.edits {
+    display: flex;
+    width: 100%;
+    height: 164px;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 40px;
+    color: $white;
+
+    &__total,
+    &__stealth {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    &__total {
+        background: linear-gradient(to right, $gray-3, $dark-blue-2);
+        flex: 0 0 75%;
+
+        &:before {
+            content: '\e900';
+            font-size: 18px;
+            display: block;
+            font-family: Icon, sans-serif;
+        }
+    }
+
+    &__stealth {
+        flex: 0 0 25%;
+        background: $light-blue;
+        
+        &:before {
+            content: '\e900';
+            font-size: 18px;
+            display: block;
+            font-family: Icon, sans-serif;
+        }
+    }
+}

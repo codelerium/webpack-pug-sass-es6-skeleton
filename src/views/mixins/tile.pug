@@ -1,0 +1,18 @@
+include indicator.pug
+
+mixin tile(colorModifier, source, title, text, caracterNumber, startDate, editDate, compact)
+    if !compact
+        a.tile(class='tile--' + colorModifier, href="#", class=(compact ? 'tile--compact' : false))
+            .tile__main
+                .tile__source.text=source
+                h2.tile__title=title
+                p.tile__content=text
+            .tile__footer
+                .tile__characters= caracterNumber + ' változtatott karacter'
+                +indicator()
+    else
+        a.tile(class='tile--' + colorModifier, href="#", class=(compact ? 'tile--compact' : false))
+                .tile__main
+                    h4.tile__title=title
+                    +indicator(caracterNumber + ' változtatott karacter', true)
+                    .tile__source.text=source

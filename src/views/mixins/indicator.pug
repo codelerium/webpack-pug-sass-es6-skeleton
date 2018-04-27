@@ -1,0 +1,5 @@
+mixin indicator(text, large)
+    .indicator(class=(large ? 'indicator--large' : false))
+        .indicator__active-mask
+            .indicator__active=text
+        .indicator__bg
