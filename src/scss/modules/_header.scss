@@ -2,11 +2,19 @@
     margin: 0 auto;
     max-width: 625px;
     text-align: center;
-    margin-bottom: 40px;
+}
+
+.intro {
+    margin: 0 auto 60px;
+    max-width: 625px;
+    text-align: center;
+    color: $white;
 
     .title {
         font-size: 16px;
+        line-height: 30px;
         margin-bottom: 40px;
+        font-weight: 100;
     }
 }
 
@@ -18,6 +26,22 @@
     .title {
         font-size: 72px;
         font-weight: 500;
+
+        &--search {
+
+            span:before {
+                display: inline-block;
+                content: '\e909';
+                font-family: Icon, sans-serif;
+                font-size: 60px;
+                padding-right: 15px;
+                font-weight: 300;
+            }
+        }
+
+        span {
+            color: $gray-1;
+        }
 
         &:before,
         &:after {

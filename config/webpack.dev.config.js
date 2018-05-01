@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const pages = ['index', 'ranking', 'listpage', 'search', 'about', 'articlepage'];
+
 module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, '../src/assets'),
@@ -56,16 +58,11 @@ module.exports = {
             },
         ]
     },
-    plugins: [
+    plugins: pages.map(page =>
         new HtmlWebpackPlugin({
-            template: 'src/views/index.pug',
-            filename: 'index.html',
-            inject: false,
+            template: `src/views/${page}.pug`,
+            filename: `${page}.html`,
+            inject: 'body',
         }),
-        new HtmlWebpackPlugin({
-            template: 'src/views/ranking.pug',
-            filename: 'ranking.html',
-            inject: false,
-        }),
-    ],
-}
+    )
+};

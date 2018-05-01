@@ -1,2 +1,10 @@
 mixin box-chart()
-    .box-chart
+    .row.box-chart
+        .col.col--2
+            .text.text--subtitle Stealth edit toplista
+            - var rankingData = [{ 'color': 'origo', 'name': 'origo.hu', 'edit': 600 }, { 'color': 'pestisracok', 'name': 'pestisracok.hu', 'edit': 241}, { 'color': '888', 'name': '888.hu', 'edit': 156 }, { 'color': 'index', 'name': 'index.hu', 'edit': 89}, { 'color': '444', 'name': '444.hu', 'edit': 80 }, { 'color': 'orosz', 'name': 'orosz.hu', 'edit': 76}, { 'color': 'fidesz', 'name': 'fidesz.hu', 'edit': 40 }];
+            +table(rankingData, true)
+        .col.col--2
+            .text.text--subtitle Stealth editek aranya ujsagonkent a vizsgalt cikkekben
+            .box-chart__wrapper
+            p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <consequat></consequat>

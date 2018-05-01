@@ -12,11 +12,12 @@
     white-space: nowrap;
     border-bottom: 3px solid $dark-blue-3;
 
-    &:not(:hover) {
+    &:not(:hover):not(&--active) {
       color: $gray-1;
     }
 
-    &:hover {
+    &:hover,
+    &--active {
       background: currentColor;
 
       & .table__col {

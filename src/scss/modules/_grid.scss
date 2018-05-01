@@ -1,18 +1,23 @@
+$one-third: 100% / 3;
+
 .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -10px;
 }
 
 .col {
     flex: 1 0 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 
     &--2 {
-        flex: 0 0 48%;
+        flex: 1 0 50%;
     }
 
     &--3 {
-        flex: 0 0 32.2%;
+        flex: 1 0 $one-third;
     }
 
     &--center {

@@ -3,24 +3,25 @@ $black: #000;
 $gray-1: #adadb8;
 $gray-2: #707083;
 $gray-3: #26263b;
+$gray-4: #5c5c71;
 $dark-blue: #002;
 $dark-blue-2: #131332;
 $dark-blue-3: #33334e;
 $light-blue: #27d5ff;
 $blue: #00f;
 
-$color-444: #ded11d;
-$color-origo: #0061ff;
-$color-pestisracok: #de1c66;
+$grad-1: linear-gradient($dark-blue, $dark-blue-2);
+$grad-2: linear-gradient($dark-blue-2, $dark-blue);
 
 $colors: (
   'default': #9b9ba1,
+  'default-secondary': #27d5ff,
   'origo': #0061ff,
   'pestisracok': #ff8498,
   '888': #de1c66,
   'index': #ff8400,
   '444': #ffdc00,
-  'orosz': #ffff98,
+  'orosz': #00ffa1,
   'fidesz': #ff6200,
   'echo': 008400,
 );

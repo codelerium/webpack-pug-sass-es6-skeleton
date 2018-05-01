@@ -12,13 +12,13 @@
   height: 80px;
   display: flex;
   align-items: center;
-  font-size: 40px;
   background: $gray-1;
   color: $dark-blue-3;
   font-weight: 100;
   padding: 0 40px 10px 66px;
   box-sizing: border-box;
   cursor: pointer;
+  @include responsive-font(32px, 40px, $viewport-small, $viewport-large);
 
   &--open {
 

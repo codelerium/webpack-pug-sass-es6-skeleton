@@ -1,7 +1,7 @@
-mixin table(data, hasIndicator)
+mixin table(data, hasIndicator, active)
     .table
         each item, index in data
-            a(href="#").table__row(class='color--' + item.color)
+            a(href="#").table__row(class='color--' + item.color class=(index === active ? 'table__row--active' : '') data-table-color=item.color)
                 .table__col= index + 1 + '.'
                 .table__col(class='table__col--indicator')
                     if hasIndicator

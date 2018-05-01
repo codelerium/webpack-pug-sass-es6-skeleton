@@ -1,0 +1,51 @@
+include article-compare-edits
+
+mixin article-compare(color)
+    .article-compare
+        .article-compare__head(class='color--' + color)
+            span.text.text--center 888.hu
+        .article-compare__body
+            .article-compare__original
+                +article-compare-edits(7, 'A cikk 7 jelöletlen változtatást tartalmaz:', '2017.02.10.')
+
+                .article-compare__article
+                    .block
+                        span.small MARTON LÁSZLÓ
+                    .block
+                        h2 Hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között
+                    .block
+                        p Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben.
+                    .block
+                        p A magyar álláspont lényege az volt, hogy az Európai Uniónak semmilyen reakciót nem szükséges adnia az Egyesült Államok kormányának Jeruzsálemet Izrael fővárosaként elismerő döntésére – mondta. A csúcson ennek megfelelően olyan kompromisszum született, hogy az EU-nak ki kell állnia korábbi állásfoglalásai mellett, tehát a közel-keleti válság megoldásával kapcsolatos eddigi uniós álláspontot kell megerősíteni – ismertette a magyar kormányfő.
+
+            .article-compare__edited
+                +article-compare-edits(7, 'A cikket 7 alkalommal módosították:', '2017.02.20.')
+
+                .article-compare__article
+                    .block
+                        span.deleted MARTON LÁSZLÓ
+                        span.added 888
+                    .block
+                        h2
+                            span.added Orban:
+                            span Hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között
+                    .block
+                        p
+                            span Izgalmas, hosszú,
+                            span.added komoly és mély vitát folytattak
+                            span az Európai Tanácsban a
+                            span.added kormányfők Jeruzsálem kérdéséről, s ennek során
+                            span Magyarország
+                            span.added sikerrel képviselte álláspontját
+                            span - nyilatkozta
+                            span.added Orbán <Viktor></Viktor>
+                            span miniszterelnök pénteken reggel Brüsszelben.
+                    .block
+                        p
+                            span.deleted A magyar álláspont lényege az volt,
+                            span hogy az Európai Uniónak semmilyen reakciót nem szükséges adnia az Egyesült Államok kormányának
+                            span.deleted Jeruzsálemet Izrael fővárosaként
+                            span.added elismerő döntésére
+                            span – mondta. A csúcson ennek megfelelően olyan kompromisszum született, hogy az EU-nak ki kell állnia korábbi állásfoglalásai mellett, tehát a közel-keleti válság megoldásával kapcsolatos eddigi uniós álláspontot kell megerősíteni – ismertette a magyar kormányfő.
+                        p
+                            span.added A témával kapcsolatban megjelent, ezen túlmenő nyilatkozatok, értelmezések nem felelnek meg a valóságnak – hívta fel a figyelmet Orbán Viktor.

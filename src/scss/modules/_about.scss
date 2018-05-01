@@ -1,0 +1,29 @@
+.about {
+  margin: 0 auto;
+  max-width: 800px;
+
+  h2, p {
+    font-size: 28px;
+    font-weight: 300;
+    color: $white;
+    margin-bottom: 90px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  &__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    max-height: 150px;
+
+    &:nth-child(1) {
+      max-height: 100px;
+    }
+  }
+}

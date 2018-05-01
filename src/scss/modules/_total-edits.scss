@@ -28,13 +28,18 @@
 
     &__stealth {
         flex: 0 0 25%;
-        background: $light-blue;
+        background: currentColor;
+
+        span {
+            color: $white;
+        }
         
         &:before {
             content: '\e901';
             font-size: 24px;
             display: block;
             font-family: Icon, sans-serif;
+            color: $white;
         }
     }
 }

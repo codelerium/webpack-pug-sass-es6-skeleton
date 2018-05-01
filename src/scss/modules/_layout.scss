@@ -1,7 +1,16 @@
 .pillarbox {
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: $viewport-small) {
+        max-width: calc(100% - 20px);
+    }
+
+    @media (min-width: $viewport-medium) {
+        max-width: calc(100% - 60px);
+    }
 
     @media (min-width: $viewport-large) {
-        margin: 0 auto;
         max-width: 1280px;
     }
 }

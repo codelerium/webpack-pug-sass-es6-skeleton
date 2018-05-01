@@ -1,0 +1,73 @@
+extends modules/layout.pug
+include mixins/graph.pug
+include mixins/button.pug
+include mixins/tile.pug
+include mixins/search.pug
+include mixins/table.pug
+include mixins/total-edits.pug
+include mixins/checkbox.pug
+include mixins/footer.pug
+include mixins/header-secondary
+
+block vars
+    - var pageColor = '888';
+
+block content
+    - var toplistData = [{ 'color': 'origo', 'name': 'origo.hu', 'edit': 1424 }, { 'color': 'pestisracok', 'name': 'pestisracok.hu', 'edit': 241}, { 'color': '888', 'name': '888.hu', 'edit': 156 }, { 'color': 'index', 'name': 'index.hu', 'edit': 89}];
+
+    +header-secondary('888.hu', '888')
+
+    section.section
+        .pillarbox
+            .row
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle
+                        span.color--888 888.HU
+                        span STEALTH EDITEK SZÁMA
+                            br
+                            | IDŐBEN A KEZDETEK ÓTA
+                    +graph('888')
+                    +button('Tudj meg többet', '#')
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle
+                        span.color--888 888.HU
+                        span stealth edit
+                            br
+                            | ranking lista
+                    +table(toplistData, false, 2)
+                    +button('Tudj meg többet', '#')
+                .col.col--3.col--center
+                    .text.text--center.text--subtitle
+                        span A
+                        span.color--888 888.hu
+                        span -N ÖSSZESEN 11.234 VIZSGÁLT CIKK
+                            br
+                            | EBBŐL 7.359 STEALTH EDIT
+                    +total-edits('221.535', '34.897', '888')
+                    +button('Tudj meg többet', '#')
+
+    section.section
+        .pillarbox
+            .row
+                .col
+                    +checkbox('A rövid karakterszámú, korrekció jellegű editek megjelenítése')
+            .row
+                .col
+                    +tile(pageColor, 'pestisrácok.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+                .col
+                    +tile(pageColor, 'origo.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+                .col
+                    +tile(pageColor, '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, true)
+                .col
+                    +tile(pageColor, '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+                .col
+                    +tile(pageColor, '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+
+        .col.col--center
+                    +button('Még több', '#')
+
+    section.section
+        .pillarbox
+            +search()
+
+    +footer()

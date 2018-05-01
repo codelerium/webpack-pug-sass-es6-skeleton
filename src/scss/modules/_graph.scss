@@ -12,14 +12,14 @@
 
   .line {
     fill: none;
-    stroke: #33334e;
+    stroke: $dark-blue-3;
     stroke-width: 3;
     stroke-miterlimit: 10;
   }
 
-  .polyline {
+  .path {
     fill: none;
-    stroke: #27d5ff;
+    stroke: currentColor;
     stroke-width: 5;
     stroke-miterlimit: 10;
   }

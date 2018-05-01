@@ -1,0 +1,15 @@
+@function num($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+@mixin responsive-font($font-size-min, $font-size-max, $break-min, $break-max) {
+    font-size: calc( #{$font-size-min} + #{num($font-size-max - $font-size-min)} * ( (100vw - #{$break-min}) / #{num($break-max - $break-min)} ) );
+    
+    @media(max-width: $break-min) {
+        font-size: $font-size-min;
+    }
+
+    @media(min-width: $break-max) {
+        font-size: $font-size-max;
+    }
+}

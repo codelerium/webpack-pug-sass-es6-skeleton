@@ -1,5 +1,4 @@
 .text {
-    color: inherit;
     font-weight: 300;
 
     &--italic {
@@ -30,9 +29,8 @@
         font-weight: 900;
         font-size: 14px;
         text-transform: uppercase;
-        padding: 15px 0;
-        max-width: 280px;
-        margin: 0 auto; 
+        padding-bottom: 15px;
+        margin: 0 auto;
     }
 
     &--uppercase {

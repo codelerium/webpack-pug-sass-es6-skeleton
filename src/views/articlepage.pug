@@ -1,0 +1,23 @@
+extends modules/layout.pug
+include mixins/footer.pug
+include mixins/search.pug
+include mixins/tile.pug
+include mixins/article-compare.pug
+
+block content
+    include modules/sticky-logo
+
+    section.section
+        .pillarbox
+            .row
+                .col
+                    +tile('888', '888.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+
+            .row
+                .col
+                    +article-compare('888')
+    section.section
+        .pillarbox
+            +search()
+
+    +footer()

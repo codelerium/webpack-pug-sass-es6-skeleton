@@ -1,5 +1,5 @@
 .search {
-    margin: 120px auto;
+    margin: 80px auto 0;
     max-width: 860px;
 
     &__header {
@@ -32,11 +32,13 @@
 
     &__main {
         display: flex;
-        margin-bottom: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
     }
 
     &__main-item {
-        flex: 0 0 50%;
+        flex: 1 0 50%;
+        min-width: 300px;
     }
 
     &__input {
@@ -59,14 +61,18 @@
         input {
             width: 100%;
             height: 100%;
-            font-size: 40px;
             padding: 0 40px 10px 100px;
+            @include responsive-font(32px, 40px, $viewport-small, $viewport-large);
 
             &::placeholder {
                 font-weight: 100;
                 color: $gray-1;
             }
         }
+    }
+
+    &__footer {
+        padding-bottom: 30px;
     }
 
     &__select {

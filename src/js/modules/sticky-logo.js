@@ -11,7 +11,9 @@ class StickLogo {
 
   init() {
     this.stickyLogo = document.querySelector(`.${CLASS_STICKY_LOGO}`);
-    this.initBindings();
+    if (this.stickyLogo) {
+      this.initBindings();
+    }
   }
 
   initBindings() {

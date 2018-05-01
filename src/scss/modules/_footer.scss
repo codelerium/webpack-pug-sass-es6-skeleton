@@ -5,7 +5,7 @@
     border-top: 5px solid $gray-3;
 
     img {
-        padding-top: 30px; 
+        padding: 20px 0 10px;
         max-width: 200px;
         opacity: .6;
     }
@@ -16,7 +16,8 @@
         align-items: center;
     }
 
-    &__link {
+    &__link,
+    &__info {
         color: $gray-2;
         font-size: 12px;
         text-transform: uppercase;

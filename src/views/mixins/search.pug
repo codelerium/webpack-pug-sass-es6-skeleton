@@ -8,16 +8,16 @@ mixin search()
             img(src="/images/FIG_01.png")
         .search__main
             .search__main-item
-                .text.text--left.text--uppercase Szabadszavas keresés
+                .text.text--left.text--uppercase.text--subtitle Szabadszavas keresés
                 .search__input
                     .search__input-icon
                     input(type="text" placeholder="keresés")
             .search__main-item
-                .text.text--right.text--uppercase Újság szerint
+                .text.text--right.text--uppercase.text--subtitle Újság szerint
                 .search__select
                     +select()
         .search__slider
-            .text.text--left.text--uppercase Idore kereses
+            .text.text--left.text--uppercase.text--subtitle IDŐRE SZŰRÉS
             +slider()
         .search__footer
             .row

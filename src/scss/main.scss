@@ -1,5 +1,4 @@
-// Mixins
-@import 'mixins/responsive-font';
+@import 'mixins/responsive';
 
 // Partials
 @import 'partials/colors';
@@ -28,3 +27,5 @@
 @import 'modules/upload-edit';
 @import 'modules/sticky-logo';
 @import 'modules/box-chart';
+@import 'modules/about';
+@import 'modules/article-compare';

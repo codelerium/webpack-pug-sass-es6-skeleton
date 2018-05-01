@@ -1,0 +1,7 @@
+mixin header-secondary(title, color, hasIcon)
+    .section
+        include ../modules/sticky-logo
+        .pillarbox
+            header.header-secondary
+                h1.text.title(class='color--' + color, class=(hasIcon ? 'title--search' : false))
+                    span= title
