@@ -1,0 +1,41 @@
+.upload-edit {
+  display: flex;
+  color: $gray-1;
+
+  &__upload,
+  &__edit {
+    display: flex;
+    align-items: center;
+  }
+
+  &__upload {
+
+    &:before {
+      content: '\e90a';
+      font-family: Icon, sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      padding-right: 10px;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      margin: 0 15px;
+      height: 2px;
+      width: 15px;
+      background: $gray-1;
+    }
+  }
+
+  &__edit {
+
+    &:before {
+      content: '\e901';
+      font-family: Icon, sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      padding-right: 10px;
+    }
+  }
+}

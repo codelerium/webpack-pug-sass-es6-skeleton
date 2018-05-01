@@ -1,8 +1,9 @@
 include indicator.pug
+include upload-edit.pug
 
-mixin tile(colorModifier, source, title, text, caracterNumber, startDate, editDate, compact)
+mixin tile(colorModifier, source, title, text, caracterNumber, startDate, editDate, compact, collapsed)
     if !compact
-        a.tile(class='tile--' + colorModifier, href="#", class=(compact ? 'tile--compact' : false))
+        a.tile(class='color--' + colorModifier, href="#", class=(compact ? 'tile--compact' : false))
             .tile__main
                 .tile__source.text=source
                 h2.tile__title=title
@@ -10,9 +11,15 @@ mixin tile(colorModifier, source, title, text, caracterNumber, startDate, editDa
             .tile__footer
                 .tile__characters= caracterNumber + ' változtatott karacter'
                 +indicator()
+                +upload-edit(startDate, editDate)
     else
-        a.tile(class='tile--' + colorModifier, href="#", class=(compact ? 'tile--compact' : false))
+        a.tile(data-original-color=colorModifier class='color--' + (collapsed ? 'default': colorModifier), href="#", class=(compact ? 'tile--compact' : false) class=(collapsed ? 'tile--collapsed' : false))
                 .tile__main
-                    h4.tile__title=title
-                    +indicator(caracterNumber + ' változtatott karacter', true)
-                    .tile__source.text=source
+                    .tile__title-wrapper
+                        h4.tile__title=title
+                        span.tile__title-info=caracterNumber + ' változtatott karacter'
+                    .tile__indicator
+                        +indicator(caracterNumber + ' változtatott karacter', true)
+                    .tile__footer
+                        .tile__source.text=source
+                        +upload-edit(startDate, editDate)

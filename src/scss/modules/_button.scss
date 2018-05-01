@@ -8,8 +8,20 @@
     transition: color .3s ease, border-color .3s ease;
     min-width: 120px;
 
-    &:hover {    
+    &:hover {
         color: $light-blue;
         border: 1px solid $light-blue;
+    }
+
+    &--large {
+        border: 4px solid $gray-2;
+        padding: 5px 10px;
+        min-width: 300px;
+        font-size: 42px;
+        font-weight: 500;
+
+        &:hover {
+            border: 4px solid $light-blue;
+        }
     }
 }

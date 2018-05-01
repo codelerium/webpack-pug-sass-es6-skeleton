@@ -8,10 +8,55 @@
         border-left-width: 10px;
         border-left-style: solid;
 
+        &.tile--collapsed {
+            background: $gray-3;
+
+            .tile__title-wrapper {
+                display: flex;
+
+                .tile__title-info {
+                    display: block;
+                    margin-left: 20px;
+                    border-left: 1px solid $white;
+                    padding-left: 20px;
+                }
+            }
+
+            .tile__indicator {
+                height: 0;
+            }
+        }
+
+        .tile__title-wrapper {
+            margin-bottom: 15px;
+
+            .tile__title-info {
+                display: none;
+            }
+        }
+
+        .tile__indicator {
+            height: 50px;
+            overflow: hidden;
+            transition: height .3s ease;
+        }
+
         .tile__title {
             font-size: 16px;
-            margin-bottom: 15px;
             font-weight: 500;
+        }
+
+        .tile__footer {
+            border: none;
+            padding: 0;
+            display: flex;
+
+            .tile__source {
+                min-width: 200px;
+                margin: 0 20px 0 0;
+                color: $gray-1;
+                border-right: 2px solid $gray-1;
+            }
         }
     }
 
@@ -29,7 +74,7 @@
     }
 
     &__footer {
-        border-top: 5px solid $gray-3; 
+        border-top: 5px solid $gray-3;
         padding: 15px;
     }
 
@@ -40,7 +85,7 @@
         margin-bottom: 10px;
 
         &:before {
-            content: '\e900';
+            content: '\e902';
             font-family: Icon, sans-serif;
             font-size: 20px;
             font-weight: 300;
@@ -61,20 +106,5 @@
 
     &__characters {
         margin-bottom: 20px;
-    }
-
-    &--origo {
-        color: $color-origo;
-        border-color: $color-origo;
-    }
-    
-    &--pestisracok {
-        color: $color-pestisracok;
-        border-color: $color-pestisracok;
-    }
-    
-    &--444 {
-        color: $color-444;
-        border-color: $color-444;
     }
 }

@@ -1,0 +1,19 @@
+.sticky-logo {
+  display: flex;
+  position: fixed;
+  opacity: 0;
+  top: 10px;
+  left: 10px;
+  width: 96px;
+  height: 96px;
+  background: $dark-blue-2;
+  border-radius: 50%;
+  transition: opacity .3s ease;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 54px 0 $black;
+
+  &--active {
+    opacity: 1;
+  }
+}

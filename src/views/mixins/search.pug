@@ -1,4 +1,6 @@
 include button.pug
+include select.pug
+include slider.pug
 
 mixin search()
     .search
@@ -8,14 +10,16 @@ mixin search()
             .search__main-item
                 .text.text--left.text--uppercase Szabadszavas keresés
                 .search__input
+                    .search__input-icon
                     input(type="text" placeholder="keresés")
             .search__main-item
                 .text.text--right.text--uppercase Újság szerint
                 .search__select
-                    select
-                        option(selected) összes portál
-                        option fidesz
+                    +select()
+        .search__slider
+            .text.text--left.text--uppercase Idore kereses
+            +slider()
         .search__footer
             .row
                 .col.col--center
-                    +button('Ok !', '#')
+                    +button('Ok !', '#', true)

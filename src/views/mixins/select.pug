@@ -1,0 +1,18 @@
+mixin select()
+  .selectWrapper
+    select
+      option Narancs
+      option Lila
+      option Sárga
+      option Kék
+    .select(tabindex="0")
+      .select__head Narancs
+      .select__options
+        .select__option.select__option--active.color--narancs
+           span Narancs
+        .select__option.color--lila
+           span Lila
+        .select__option.color--sarga
+           span Sárga
+        .select__option.color--kek
+           span Kék

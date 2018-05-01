@@ -1,0 +1,23 @@
+extends modules/layout.pug
+include mixins/table.pug
+include mixins/search.pug
+include mixins/box-chart.pug
+include mixins/footer.pug
+
+block content
+    include modules/header-secondary.pug
+    - var rankingData = [{ 'color': 'origo', 'name': 'origo.hu', 'edit': 600 }, { 'color': 'pestisracok', 'name': 'pestisracok.hu', 'edit': 241}, { 'color': '888', 'name': '888.hu', 'edit': 156 }, { 'color': 'index', 'name': 'index.hu', 'edit': 89}, { 'color': '444', 'name': '444.hu', 'edit': 80 }, { 'color': 'orosz', 'name': 'orosz.hu', 'edit': 76}, { 'color': 'fidesz', 'name': 'fidesz.hu', 'edit': 40 }];
+
+    .section
+        .pillarbox
+            .row
+                .col.col--2
+                    +table(rankingData, true)
+                .col.col--2
+                    +box-chart()
+
+    .section
+        .pillarbox
+            +search()
+
+    +footer()

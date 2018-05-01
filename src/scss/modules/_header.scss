@@ -9,3 +9,30 @@
         margin-bottom: 40px;
     }
 }
+
+.header-secondary {
+    max-width: 625px;
+    text-align: center;
+    margin: 20px auto 40px;
+
+    .title {
+        font-size: 72px;
+        font-weight: 500;
+
+        &:before,
+        &:after {
+            display: inline-block;
+            content: '\e903';
+            font-family: Icon, sans-serif;
+            font-size: 32px;
+        }
+
+        &:before {
+            margin-right: 40px;
+        }
+
+        &:after {
+            margin-left: 40px;
+        }
+    }
+}

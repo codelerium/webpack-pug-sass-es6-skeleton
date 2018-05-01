@@ -60,7 +60,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/views/index.pug',
             filename: 'index.html',
-            chunks: ['global', 'index'],
+            inject: false,
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/views/ranking.pug',
+            filename: 'ranking.html',
+            inject: false,
         }),
     ],
 }

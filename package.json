@@ -28,5 +28,8 @@
     "webpack-cli": "^2.0.15",
     "webpack-dev-server": "^3.1.3",
     "webpack-svg-sprite-plugin": "^1.2.0"
+  },
+  "dependencies": {
+    "moment": "^2.22.1"
   }
 }

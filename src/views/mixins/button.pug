@@ -1,2 +1,2 @@
-mixin button(text, src)
-    a.button(href=src)=text
+mixin button(text, src, large)
+    a.button(href=src class=(large ? 'button--large' : false))=text
