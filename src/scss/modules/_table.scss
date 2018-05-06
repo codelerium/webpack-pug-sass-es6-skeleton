@@ -33,11 +33,19 @@
   &__col {
     position: relative;
     flex: 1 1 50%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    max-width: 180px;
+    height: 100%;
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+      transform: translateY(-50%);
+    }
 
     &:nth-child(1) {
       line-height: 40px;
@@ -52,7 +60,7 @@
       border-right: 1px solid $dark-blue-3;
       padding-right: 20px;
 
-      &:before {
+      .table__col-content:before {
         content: '\e902';
         font-family: Icon, sans-serif;
         font-size: 20px;
@@ -73,7 +81,7 @@
     &:nth-child(3) {
       padding-right: 20px;
 
-      &:before {
+      .table__col-content:before {
         content: '\e901';
         font-family: Icon, sans-serif;
         font-size: 24px;

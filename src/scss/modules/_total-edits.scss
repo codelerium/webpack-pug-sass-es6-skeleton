@@ -10,8 +10,19 @@
 
     &__total,
     &__stealth {
+        position: relative;
         padding: 10px;
         box-sizing: border-box;
+        transition: flex-basis .3s ease;
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            left: 10px;
+            right: 10px;
+            position: absolute;
+            text-overflow: ellipsis;
+        }
     }
 
     &__total {

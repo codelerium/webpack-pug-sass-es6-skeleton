@@ -1,5 +1,6 @@
 mixin total-edits(total, stealth, color)
-    .edits
-        .edits__total=total
-        .edits__stealth(class='color--' + color)
+    .edits(data-total-edits)
+        .edits__total(data-total=total)
+            span= total
+        .edits__stealth(class='color--' + color data-edited=stealth)
             span= stealth

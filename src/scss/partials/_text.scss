@@ -26,11 +26,12 @@
     }
 
     &--subtitle {
+        max-height: 37px;
         font-weight: 900;
         font-size: 14px;
         text-transform: uppercase;
-        padding-bottom: 15px;
-        margin: 0 auto;
+        margin: 0 auto 15px;
+        overflow: hidden;
     }
 
     &--uppercase {

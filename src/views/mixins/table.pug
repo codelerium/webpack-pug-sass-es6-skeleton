@@ -4,9 +4,12 @@ mixin table(data, hasIndicator, active)
             a(href="#").table__row(class='color--' + item.color class=(index === active ? 'table__row--active' : '') data-table-color=item.color)
                 .table__col= index + 1 + '.'
                 .table__col(class='table__col--indicator')
-                    if hasIndicator
-                        .table__col-indicator(class='color--' + item.color)
-                        span= item.name
-                    else
-                        span= item.name
-                .table__col= item.edit + ' stealth edit'
+                    .table__col-content
+                        if hasIndicator
+                            .table__col-indicator(class='color--' + item.color)
+                            span= item.name
+                        else
+                            span= item.name
+                .table__col
+                    .table__col-content
+                        span= item.edit + ' stealth edit'

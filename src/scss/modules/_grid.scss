@@ -18,6 +18,7 @@ $one-third: 100% / 3;
 
     &--3 {
         flex: 1 0 $one-third;
+        min-width: 280px;
     }
 
     &--center {

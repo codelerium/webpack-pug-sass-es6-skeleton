@@ -4,6 +4,7 @@ import { selectController } from './controllers/selectController';
 import { graphController } from './controllers/graphController';
 import { boxChartController } from './controllers/boxChartController';
 import { articleCompareController } from './controllers/articleCompareController';
+import { totelEditsController } from './controllers/totalEditsController';
 import { stickyLogo } from './modules/sticky-logo';
 
 class App {
@@ -13,6 +14,7 @@ class App {
     graphController.init();
     boxChartController.init();
     articleCompareController.init();
+    totelEditsController.init();
     stickyLogo.init();
   }
 }
