@@ -17,8 +17,12 @@
         border: 4px solid $gray-2;
         padding: 5px 10px;
         min-width: 300px;
-        font-size: 42px;
+        @include responsive-font(32px, 42px, $viewport-small, $viewport-large);
         font-weight: 500;
+
+        @media (max-width: $viewport-medium) {
+            min-width: 240px;
+        }
 
         &:hover {
             border: 4px solid $light-blue;

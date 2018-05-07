@@ -2,10 +2,44 @@
     margin: 0 auto;
     max-width: 625px;
     text-align: center;
+
+    &__logo {
+        position: relative;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        &:before,
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+        }
+
+        &:before {
+            top: 25%;
+            left: 55%;
+            width: 16.5%;
+            height: 30%;
+            background: radial-gradient(white 0, transparent 50%);
+            animation: pulse 2s infinite ease;
+        }
+
+        &:after {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: radial-gradient(rgba(255, 255, 255, .5) 0, transparent 50%);
+            z-index: -1;
+        }
+    }
 }
 
 .intro {
-    margin: 0 auto 60px;
+    margin: 0 auto;
     max-width: 625px;
     text-align: center;
     color: $white;
@@ -58,5 +92,19 @@
         &:after {
             margin-left: 40px;
         }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

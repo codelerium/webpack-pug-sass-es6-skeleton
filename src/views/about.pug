@@ -3,7 +3,12 @@ include mixins/search.pug
 include mixins/footer.pug
 
 block content
-    include modules/header.pug
+    section.section
+        include modules/sticky-logo
+        .pillarbox
+            header.header
+                .header__logo
+                    img(src="/images/sf_wh.png")
 
     section.section
         .pillarbox

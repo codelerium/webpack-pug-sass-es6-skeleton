@@ -79,8 +79,11 @@
   }
 
   &__range-wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     color: $dark-blue-3;
+    left: -13px;
+    width: calc(100% + 26px);
   }
 }

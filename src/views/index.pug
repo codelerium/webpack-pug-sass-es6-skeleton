@@ -12,11 +12,12 @@ block vars
     - var pageColor = 'default-secondary';
 
 block content
-    include modules/header.pug
-            - var toplistData = [{ 'color': 'origo', 'name': 'origo.hu', 'edit': 1424 }, { 'color': 'pestisracok', 'name': 'pestisracok.hu', 'edit': 241}, { 'color': '888', 'name': '888.hu', 'edit': 156 }, { 'color': 'index', 'name': 'index.hu', 'edit': 89}];
-
     section.section
+        include modules/sticky-logo
         .pillarbox
+            header.header
+                .header__logo
+                    img(src="/images/sf_wh.png")
             .intro
                 h1.text.title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.
                 +button('Tudj meg többet', '#')
@@ -25,7 +26,8 @@ block content
         .pillarbox
             .divider
 
-    section.section    
+    section.section
+        - var toplistData = [{ 'color': 'origo', 'name': 'origo.hu', 'edit': 1424 }, { 'color': 'pestisracok', 'name': 'pestisracok.hu', 'edit': 241}, { 'color': '888', 'name': '888.hu', 'edit': 156 }, { 'color': 'index', 'name': 'index.hu', 'edit': 89}];
         .pillarbox
             .row
                 .col.col--3.col--center
@@ -79,6 +81,10 @@ block content
                     +tile('origo', 'origo.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, true)
                 .col
                     +tile('444', '444.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, false)
+                .col
+                    +tile('index', 'index.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, true)
+                .col
+                    +tile('888', '888.hu', 'Orbán: hosszú és komoly vita folyt Jeruzsálem kérdéséről a kormányfők között', 'Izgalmas, hosszú, komoly és mély vitát folytattak az Európai Tanácsban a kormányfők Jeruzsálem kérdéséről, s ennek során Magyarország sikerrel képviselte álláspontját - nyilatkozta Orbán Viktor miniszterelnök pénteken reggel Brüsszelben...', '211', '2017.02.10.', '2017.02.15.', true, true)
 
                 .col.col--center
                     +button('Még több', '#') 

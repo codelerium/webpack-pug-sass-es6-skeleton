@@ -69,14 +69,14 @@ export default class Slider {
       this.currentBar.style.left = `${this.fromLeft}px`;
       const proportion = this.fromLeft / this.sliderWidth;
       const months = Math.round(this.monthsInRange * proportion);
-      this.rangeStartControlText.innerText = moment(this.rangeStart).add(months, 'months').format('`YY.MM');
+      this.rangeStartControlText.innerText = moment(this.rangeStart).add(months, 'months').format('‘YY.MM');
     }
     if (this.isRangeEndActive) {
       this.fromRight = this.sliderWidth - currentX;
       this.currentBar.style.right = `${this.fromRight}px`;
       const proportion = this.fromRight / this.sliderWidth;
       const months = Math.round(this.monthsInRange * proportion);
-      this.rangeEndControlText.innerText = moment(this.rangeEnd).subtract(months, 'months').format('`YY.MM');
+      this.rangeEndControlText.innerText = moment(this.rangeEnd).subtract(months, 'months').format('‘YY.MM');
     }
   }
 

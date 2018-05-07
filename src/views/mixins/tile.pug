@@ -13,7 +13,7 @@ mixin tile(colorModifier, source, title, text, caracterNumber, startDate, editDa
                 +indicator()
                 +upload-edit(startDate, editDate)
     else
-        a.tile(data-original-color=colorModifier class='color--' + (collapsed ? 'default': colorModifier), href="#", class=(compact ? 'tile--compact' : false) class=(collapsed ? 'tile--collapsed' : false))
+        a.tile(data-tile-collapse=(collapsed) data-original-color=colorModifier class='color--' + (collapsed ? 'default': colorModifier), href="#", class=(compact ? 'tile--compact' : false) class=(collapsed ? 'tile--collapsed' : false))
                 .tile__main
                     .tile__title-wrapper
                         h4.tile__title=title

@@ -9,7 +9,7 @@
   position: relative;
   background: gray;
   width: 100%;
-  height: 80px;
+  height: 100%;
   display: flex;
   align-items: center;
   background: $gray-1;
@@ -19,6 +19,10 @@
   box-sizing: border-box;
   cursor: pointer;
   @include responsive-font(32px, 40px, $viewport-small, $viewport-large);
+
+  &__head {
+    white-space: nowrap;
+  }
 
   &--open {
 

@@ -4,6 +4,7 @@
 
   &__upload,
   &__edit {
+    @include responsive-font(14px, 16px, $viewport-small, $viewport-large);
     display: flex;
     align-items: center;
   }
@@ -15,13 +16,13 @@
       font-family: Icon, sans-serif;
       font-size: 24px;
       font-weight: 300;
-      padding-right: 10px;
+      padding-right: 8px;
     }
 
     &:after {
       display: block;
       content: '';
-      margin: 0 15px;
+      margin: 0 10px;
       height: 2px;
       width: 15px;
       background: $gray-1;
@@ -35,7 +36,7 @@
       font-family: Icon, sans-serif;
       font-size: 24px;
       font-weight: 300;
-      padding-right: 10px;
+      padding-right: 4px;
     }
   }
 }
